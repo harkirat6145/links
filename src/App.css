@@ -1,0 +1,59 @@
+.height {
+  height: 85vh;
+}
+
+.imgheight {
+  height: 50px;
+}
+
+.global {
+  top: 33px;
+  left: 19px;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.upload {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgwhite {
+  background-color: rgb(255, 255, 255);
+}
+
+.fntwight {
+
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
+.borderradius {
+  border-radius: 3px;
+}
+
+.form-col {
+  background-color: darkgrey;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+  .display-none {
+    display: unset !important;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

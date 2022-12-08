@@ -1,0 +1,48 @@
+import React, { useState } from "react";
+
+export default function Contact() {
+  const [counter, setCounter] = useState(0);
+  let colorBg = localStorage.getItem("color");
+  //increase counter
+  const increase = () => {
+    if (counter < 20) {
+      setCounter((count) => count + 1);
+    }
+  };
+  //decrease counter
+  const decrease = () => {
+    if (counter > 0) {
+      setCounter((count) => count - 1);
+    }
+  };
+  //reset counter
+  const reset = () => {
+    setCounter(0);
+  };
+  return (
+    <>
+      <div
+        className="text-light text-center height p-5"
+        style={{
+          background: colorBg,
+        }}
+      >
+        <div className="counter text-dark">
+          <h1>React Counter</h1>
+          <span className="counter__output">{counter}</span>
+          <div className="btn__container">
+            <button className="control__btn" onClick={increase}>
+              +
+            </button>
+            <button className="control__btn" onClick={decrease}>
+              -
+            </button>
+            <button className="reset" onClick={reset}>
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
